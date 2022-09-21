@@ -4,7 +4,7 @@
 """
 
 
-class Square(object):
+class Square:
     """
         this module defines a square class    
     """
