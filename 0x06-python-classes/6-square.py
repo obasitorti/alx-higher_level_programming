@@ -67,6 +67,11 @@ class Square:
           prints the square using #s  
         """
         if self.__size == 0:
-            print()
+            print("")
+            return
+
+        [print("") for i in range(self.__position[1])]
         for i in range(self.__size):
-            print("#" * self.__size)
+            [print(" ", end="") for j in range(self.__position[0])]
+            [print("#", end="") for k in range(self.__size)]
+            print("")
