@@ -60,10 +60,11 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
         for i in range(self.__height):
-            print('\n')
+            if i > 0:
+                rect_print += "\n"
             for j in range(self.__width):
-                rect_print += Rectangle.print_symbol
-            return rect_print
+                rect_print += str(self.print_symbol)
+        return rect_print
 
     def __repr__(self):
         """String representation"""
