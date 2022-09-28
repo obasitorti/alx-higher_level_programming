@@ -11,7 +11,7 @@ class Rectangle:
         """Inittialisation of class rectangle"""
         self.width = width
         self.height = height
-        
+
         Rectangle.number_of_instances += 1
 
     @property
@@ -68,6 +68,3 @@ class Rectangle:
         print("Bye rectangle...")
 
         Rectangle.number_of_instances -= 1
-
-
-
