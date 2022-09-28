@@ -2,9 +2,6 @@
 """This module defines a class rectangle"""
 
 
-from turtle import width
-
-
 class Rectangle:
     """This class defines a rectangle"""
 
