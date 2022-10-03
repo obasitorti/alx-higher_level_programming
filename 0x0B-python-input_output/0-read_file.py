@@ -8,5 +8,5 @@
 
 def read_file(filename=""):
     """function definition"""
-    a_file = open(filename, encoding='utf-8')
-    a_file.read()
+    with open(filename, encoding='utf-8') as a_file
+        print(a_file.read(), end="")
