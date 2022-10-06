@@ -3,6 +3,7 @@
 
 
 from models.base import Base
+# from base import Base
 
 
 class Rectangle(Base):
@@ -75,3 +76,12 @@ class Rectangle(Base):
     def area(self):
         """returns the area of rectangle"""
         return self.width * self.height
+
+    def display(self):
+        """displays the recangle"""
+
+        for i in range(self.__height):
+            print("")
+            for j in range(self.__width):
+                print("#", end="")
+        print()
