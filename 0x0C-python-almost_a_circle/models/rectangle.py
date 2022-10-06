@@ -2,8 +2,8 @@
 """module initialisation"""
 
 
-from models.base import Base
-# from base import Base
+# from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -84,3 +84,8 @@ class Rectangle(Base):
             for j in range(self.__width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """overrides the class str method"""
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} -\
+ {self.width}/{self.height}"
