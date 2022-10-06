@@ -2,8 +2,8 @@
 """module initialisation"""
 
 
-from models.base import Base
-# from base import Base
+# from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -81,7 +81,6 @@ class Rectangle(Base):
         """displays the recangle"""
 
         for i in range(self.__height):
-            print("")
             for j in range(self.__width):
                 print("#", end="")
-        print()
+            print()
