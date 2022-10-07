@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """module initialization"""
 
-# from rectangle import Rectangle
-from models.rectangle import Rectangle
+from rectangle import Rectangle
+# from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -17,5 +17,20 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """ovorrides string representation"""
+        """overrides string representation"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
+
+    @property
+    def size(self):
+        return self.__height
+
+    @size.setter
+    def size(self, value):
+        """size setter"""
+        if type(value) is not int:
+            raise TypeError("size must be an integer")
+        if value <= 0:
+            raise ValueError("size must be > 0")
+
+        self.__width = value
+        self.__height = value
