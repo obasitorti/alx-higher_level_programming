@@ -32,6 +32,5 @@ class Base:
             for obj in list_objs:
                 obj_dict.append(cls.to_dictionary(obj))
         filename = cls.__name__ + ".json"
-        with open (filename, "w", encoding="utf-8") as f:
+        with open(filename, "w", encoding="utf-8") as f:
             f.write(cls.to_json_string(obj_dict))
-
