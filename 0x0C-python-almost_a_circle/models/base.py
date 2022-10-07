@@ -2,6 +2,9 @@
 """initialize module"""
 
 
+import json
+
+
 class Base:
     """defines a class Base"""
     __nb_objects = 0
@@ -12,3 +15,10 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """returns json string representation of the dict"""
+        if list_dictionaries is None:
+            return ("[]")
+        else:
+            json.dumps(list_dictionaries)
