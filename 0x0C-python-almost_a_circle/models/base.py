@@ -34,3 +34,11 @@ class Base:
         filename = cls.__name__ + ".json"
         with open(filename, "w", encoding="utf-8") as f:
             f.write(cls.to_json_string(obj_dict))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns python list of a json string"""
+        if json_string is None or json_string == []:
+            return ("[]")
+        else:
+            return json.loads(json_string)
