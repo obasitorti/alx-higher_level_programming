@@ -2,8 +2,8 @@
 """module initialisation"""
 
 
-from models.base import Base
-# from base import Base
+# from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -92,3 +92,22 @@ class Rectangle(Base):
         """overrides the class str method"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} -\
  {self.width}/{self.height}"
+
+    def update(self, *args):
+        """assigns arguments to each attribute"""
+        a = 0
+        for arg in args:
+                if a == 0:
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif a == 1:
+                    self.width = arg
+                elif a == 2:
+                    self.height = arg
+                elif a == 3:
+                    self.x = arg
+                elif a == 4:
+                    self.y = arg
+                a += 1
